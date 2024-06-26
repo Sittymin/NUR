@@ -14,7 +14,13 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
+  xwayland-satellite = pkgs.callPackage ./pkgs/xwayland-satellite { };
+  olympus = pkgs.callPackage ./pkgs/olympus { };
+  intel-dpcpp = pkgs.callPackage ./pkgs/intel-dpcpp { };
+  intel-mpi = pkgs.callPackage ./pkgs/intel-mpi { };
+  oneapi-mkl = pkgs.callPackage ./pkgs/oneapi-mkl { };
+  lxgw-neoxihei = pkgs.callPackage ./pkgs/lxgw-neoxihei { };
+  rustdesk = pkgs.callPackage ./pkgs/rustdesk { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }

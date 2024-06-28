@@ -1166,27 +1166,11 @@ checksum = "6245d59a3e82a7fc217c5828a6692dbc6dfb63a0c8c90495621f7b9d79704a0e"
 [[package]]
 name = "core-foundation"
 version = "0.9.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "194a7a9e6de53fa55116934067c844d9d749312f75c6f6d0980e8c252f8c2146"
-dependencies = [
- "core-foundation-sys 0.8.4",
- "libc",
-]
-
-[[package]]
-name = "core-foundation"
-version = "0.9.3"
 source = "git+https://github.com/madsmtm/core-foundation-rs.git?rev=7d593d016175755e492a92ef89edca68ac3bd5cd#7d593d016175755e492a92ef89edca68ac3bd5cd"
 dependencies = [
  "core-foundation-sys 0.8.6",
  "libc",
 ]
-
-[[package]]
-name = "core-foundation-sys"
-version = "0.8.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e496a50fda8aacccc86d7529e2c1e0892dbd0f898a6b5645b5561b89c3210efa"
 
 [[package]]
 name = "core-foundation-sys"
@@ -1212,19 +1196,6 @@ dependencies = [
 [[package]]
 name = "core-graphics"
 version = "0.23.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "970a29baf4110c26fedbc7f82107d42c23f7e88e404c4577ed73fe99ff85a212"
-dependencies = [
- "bitflags 1.3.2",
- "core-foundation 0.9.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "core-graphics-types 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "foreign-types 0.5.0",
- "libc",
-]
-
-[[package]]
-name = "core-graphics"
-version = "0.23.1"
 source = "git+https://github.com/madsmtm/core-foundation-rs.git?rev=7d593d016175755e492a92ef89edca68ac3bd5cd#7d593d016175755e492a92ef89edca68ac3bd5cd"
 dependencies = [
  "bitflags 1.3.2",
@@ -1233,17 +1204,6 @@ dependencies = [
  "foreign-types 0.5.0",
  "libc",
  "objc2-encode",
-]
-
-[[package]]
-name = "core-graphics-types"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2bb142d41022986c1d8ff29103a1411c8a3dfad3552f87a4f8dc50d61d4f4e33"
-dependencies = [
- "bitflags 1.3.2",
- "core-foundation 0.9.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc",
 ]
 
 [[package]]

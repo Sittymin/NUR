@@ -34,8 +34,6 @@ rustPlatform.buildRustPackage rec {
   '';
 
   meta = with lib; {
-    # 构建时Rust版本太低
-    broken = true;
     description = "Xwayland outside your Wayland ";
     homepage = "https://github.com/Supreeeme/xwayland-satellite";
     license = licenses.mpl20;

@@ -5,18 +5,19 @@
 , pkg-config
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage {
   pname = "xwayland-satellite";
-  version = "0.4";
+  version = "unstable";
   src = fetchFromGitHub ({
     owner = "Supreeeme";
     repo = "xwayland-satellite";
-    rev = "v${version}";
+    # 2024.7.5 commit
+    rev = "d32eae139dc7d2bdb288a308e76fc98a57a4e66b";
     fetchSubmodules = false;
-    sha256 = "sha256-dwF9nI54a6Fo9XU5s4qmvMXSgCid3YQVGxch00qEMvI=";
+    sha256 = "sha256-NcvFk8u43Q/XiuHzO1yQX9veXy6frRBJZhDHz3ESUX0=";
   });
 
-  cargoSha256 = "sha256-nKPSkHbh73xKWNpN/OpDmLnVmA3uygs3a+ejOhwU3yA=";
+  cargoSha256 = "sha256-xP3qGSaYw+cNnnsjCLwP3RKBpgW+wnIzid2rUepgSW8=";
 
   nativeBuildInputs = [
     rustPlatform.bindgenHook

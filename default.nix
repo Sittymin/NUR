@@ -22,6 +22,7 @@
   lxgw-neoxihei = pkgs.callPackage ./pkgs/lxgw-neoxihei { };
   rustdesk = pkgs.callPackage ./pkgs/rustdesk { };
   thorium = pkgs.callPackage ./pkgs/thorium { };
+  apostrophe-2_6_3 = pkgs.callPackage ./pkgs/apostrophe { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }

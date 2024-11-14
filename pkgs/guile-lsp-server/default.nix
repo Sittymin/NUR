@@ -1,5 +1,7 @@
 { lib
 , stdenv
+, fetchFromGitea
+, fetchzip
 , guile
 , pkg-config
 , automake
@@ -11,23 +13,31 @@ stdenv.mkDerivation rec {
   pname = "guile-lsp-server";
   version = "0.4.5";
 
-  src = builtins.fetchGit {
-    url = "https://codeberg.org/rgherdt/scheme-lsp-server.git";
-    ref = "${version}";
-    rev = "81d2b3613ea48f345e868d191bbf1b92686cbe60";
+  src = fetchFromGitea {
+    domain = "codeberg.org";
+    owner = "rgherdt";
+    repo = "scheme-lsp-server";
+    rev = "${version}";
+    hash = "sha256-YxTK8C1OrYcRY9nuwWewQnW9r123nAkyH1zBC5cjEH0=";
   };
 
-  srfi = fetchTarball {
-    url = "https://codeberg.org/rgherdt/srfi/archive/main.tar.gz";
-    sha256 = "0k8libc4nfd0k0kibpdjvmgazpf8p71sjgpfg4ryv8n3z6zkdwwj";
+  srfi = fetchFromGitea {
+    domain = "codeberg.org";
+    owner = "rgherdt";
+    repo = "srfi";
+    rev = "e598c28eb78e9c3e44f5c3c3d997ef28abb6f32e";
+    hash = "sha256-kvM2v/nDou0zee4+qcO5yN2vXt2y3RUnmKA5S9iKFE0=";
   };
-  irregex = fetchTarball {
+  irregex = fetchzip {
     url = "http://synthcode.com/scheme/irregex/irregex-0.9.10.tar.gz";
-    sha256 = "0whfa255pfnml5vmwag0bkx7bz93d4v17gjyhwhq0aipqsm9pqnd";
+    hash = "sha256-zeKbqsY3KoAhh16+EzZpI/11+lzgKV53odW6W4pQDnI=";
   };
-  json-rpc = fetchTarball {
-    url = "https://codeberg.org/rgherdt/scheme-json-rpc/archive/master.tar.gz";
-    sha256 = "0356hm6phcfgvwvx3ys6b927v40jzb7qrfgvql7g78na24zp2cmi";
+  json-rpc = fetchFromGitea {
+    domain = "codeberg.org";
+    owner = "rgherdt";
+    repo = "scheme-json-rpc";
+    rev = "70192263f3947624400803e00fa37e69b9e574a3";
+    hash = "sha256-sTJxPxHKovMOxfu5jM/6EpB9RFpG+9E3388xeE2Fpgw=";
   };
 
   nativeBuildInputs = [

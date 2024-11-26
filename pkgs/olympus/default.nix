@@ -148,6 +148,7 @@ buildDotnetModule {
   passthru.updateScript = ./update.sh;
 
   meta = {
+    broken = true;
     description = "Cross-platform GUI Everest installer and Celeste mod manager";
     homepage = "https://github.com/EverestAPI/Olympus";
     downloadPage = "https://everestapi.github.io/#olympus";

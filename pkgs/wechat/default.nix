@@ -65,9 +65,10 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   version = "4.1.13.9";
 
   src = fetchurl {
-    # 上游直链：https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb
-    # 直链内容经常原地更新，这里用 web.archive.org 快照 pin 住（同 PR #560225）。
-    url = "https://web.archive.org/web/20260905080413id_/https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb";
+    # 上游实时直链，由 .github/workflows/update-wechat.yml 每天自动跟进
+    # version/hash（同 chatgpt 包的机制）。直链内容会被官方原地替换，
+    # 因此不要手锁 hash，交给 workflow 处理。
+    url = "https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb";
     hash = "sha256-CWhl4FC6DTwaI4hyJ+JAC/NDA3sdfWWMhMiP8mv9wX8=";
   };
 
